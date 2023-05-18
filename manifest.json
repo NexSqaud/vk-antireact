@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "VK NoReaction",
+  "version": "1.0",
+
+  "description": "Disables message reactions in VK",
+  "icons": {
+    "96": "icons/96.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "vk-noreact@nexsqaud",
+      "strict_min_version": "48.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://vk.com/im*"],
+      "js": ["noreact.js"]
+    }
+  ]
+
+}
